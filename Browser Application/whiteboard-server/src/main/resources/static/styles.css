@@ -1,0 +1,90 @@
+
+html, body {
+  overflow: hidden;
+}
+
+/*---------------------------------------------*/
+/*----------------Lobby Elements----------------*/
+/*---------------------------------------------*/
+
+#lobby {
+    display: unset;
+}
+
+#background{
+	background : #9FBFBD;
+	height:100%;
+	overflow: auto;
+}
+
+#roomSection{
+	background : #D5D2D2;
+	height: 100%;
+}
+
+#tableSection{
+	background : #ECF1DF;
+	height: 100%;
+	overflow: auto;
+}
+
+/*---------------------------------------------*/
+/*----------------Room Elements----------------*/
+/*---------------------------------------------*/
+
+#room {
+    display: none;
+}
+
+#backgroundWhiteboard{
+	background : white;
+	height:100%;
+}
+
+#whiteboardSection{
+	background : white;
+	height: 100%;
+}
+
+#memberInfoSection{
+	background : #9FBFBD;
+	height: 100%;
+	border-left : dotted;
+}
+
+/*---------------------Chat Stuff--------------------*/
+#chat{
+	background : #9FBFBD;
+	border-top : dotted;
+}
+
+.chat{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.panel-body{
+    overflow-y: scroll;
+    height: 14%;
+	background : #293133;
+	border-style : solid;
+	border-radius : 5px;
+}
+
+#sendButton{
+    background: #293133;
+    color: white;
+    border:  none;
+}
+#sendButton:active{
+    background: white;
+    color: #293133;
+    border:  none;
+}
+
+#chatField{
+	background : #293133;
+	color : white;
+}
+/*---------------------------------------------------*/

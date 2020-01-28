@@ -1,0 +1,22 @@
+image: maven:latest
+
+cache:
+    paths:
+        - mvn.repo/
+       
+       
+variables:
+  MAVEN_OPTS: "-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN"  
+
+
+compile:
+    stage: build
+    script:
+        - cd whiteboard-server
+        - mvn compile -B
+        
+        
+verify:
+    script:
+        - cd whiteboard-server
+        - mvn verify -B

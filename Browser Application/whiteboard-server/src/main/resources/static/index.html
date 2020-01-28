@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Whiteboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+<!-- ************************************LOBBY Area*********************************** -->
+	<span id="lobby">
+		<div class="container-fluid" id="background">
+    		<h1 id="welcomeText">Whiteboard - Willkommen in der Lobby</h1>
+
+			<div class="row">
+    			<div class="col-sm-4 col-md-3" id="roomSection">
+
+       		 		<div class="form-group">
+           		 		<label id="raumSuchen" for="rS">Suchen:</label>
+           			 	<input type="text" class="form-control" id="rS">
+        			</div>
+        			<div class="form-group">
+          		  		<label id="raumName" for="rN">Raumname:</label>
+            			<input type="text" class="form-control" id="rN">
+        			</div>
+        			<div class="form-group">
+           		 		<label id="password" for="p">Passwort:</label>
+         		   	 	<input type="password" class="form-control" id="p">
+        			</div>
+
+        			<button type="button" class="btn btn-dark" id="createRoom">Create Room</button>
+    			</div>
+
+    			<div class="col-sm-8 offset-md-0 col-md-9" id="tableSection">
+        			<div class="m-5 pb-5" id="anzeigeRooms">
+         			   	<table class="table table-dark" id="tabelleRooms">
+            				<thead>
+                				<tr id="kopf">
+                  	  				<th scope="col" id="roomName">Raumname</th>
+                    				<th scope="col" id="roomUser">Benutzerzahl</th>
+                    				<th scope="col">Gesperrt</th>
+                    				<th scope="col">Raum beitreten</th>
+                				</tr>
+            				</thead>
+     					</table>
+    				</div>
+   				</div>
+ 			</div>
+ 		</div>
+	</span>
+<!-- ************************************************************************************************************ -->
+
+<!-- *****************************************ROOM Area************************************** -->
+	<span id="room">
+		<div class="container-fluid" id="backgroundWhiteboard">
+			<div class="row" id="roomRow1">
+				<div class="col-sm-8 offset-md-0 col-md-10" id="whiteboardSection">
+	
+				</div>
+
+				<div class="col-sm-4 col-md-2" id="memberInfoSection">
+
+				</div>
+			</div>
+				<!-- *****************************************ChatField*************************************** -->
+			<div class="row" id="roomRow2">
+				<div class="col-sm-4 col-md-12" id="chat">
+                	<div class="panel-heading" id="panelHead">Chat
+                    		<div class="btn-group pull-right">
+                    		<button type="button" class="btn btn-default btn-xs dropdown-toggle" id="toggleChat" onclick="toggleChat();"></button>
+                   		</div>
+                	</div>
+                	<div class="panel-body" id="panelChat">
+                   		<ul class="chat" id="chatField"><li>Willkommen im Whiteboard !</li></ul>
+                	</div>
+                	<div class="panel-footer" id="panelFooter">
+                    	<div class="input-group">
+                       		<input id="chatTextField" type="text" class="form-control input-sm" placeholder="Schreibe deine Nachricht..." />
+                        	<span class="input-group-btn">
+                          		<button class="btn" id="sendButton">Senden</button>
+                       		</span>
+   						 </div>
+					</div>
+				</div>
+				<!-- ********************************************************************************************** -->
+			</div>
+		</div>
+	</span>
+<!-- ************************************************************************************************************ -->
+</body>
+</html>
